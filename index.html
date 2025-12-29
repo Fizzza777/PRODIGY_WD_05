@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atmosphere | Modern Weather</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="app-container">
+      <header>
+        <div class="search-box">
+          <i class="fa-solid fa-location-dot location-icon"></i>
+          <input
+            type="text"
+            id="city-input"
+            placeholder="Enter your city location"
+          />
+          <button id="search-btn">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </div>
+        <button id="location-btn" class="icon-btn" title="Use current location">
+          <i class="fa-solid fa-crosshairs"></i>
+        </button>
+      </header>
+
+      <main id="weather-content" class="weather-content hidden">
+        <div class="weather-main">
+          <img
+            id="weather-icon"
+            src=""
+            alt="Weather Icon"
+            class="weather-icon-img"
+          />
+          <h1 id="temperature" class="temperature">--°C</h1>
+          <p id="description" class="description">--</p>
+          <div class="location-badge">
+            <i class="fa-solid fa-location-dot"></i>
+            <span id="city-name">--</span>
+          </div>
+        </div>
+
+        <div class="weather-details">
+          <div class="detail-card">
+            <div class="detail-icon">
+              <i class="fa-solid fa-water"></i>
+            </div>
+            <div class="detail-info">
+              <p class="label">Humidity</p>
+              <p id="humidity" class="value">--%</p>
+            </div>
+          </div>
+          <div class="detail-card">
+            <div class="detail-icon">
+              <i class="fa-solid fa-wind"></i>
+            </div>
+            <div class="detail-info">
+              <p class="label">Wind Speed</p>
+              <p id="wind-speed" class="value">-- km/h</p>
+            </div>
+          </div>
+          <div class="detail-card">
+            <div class="detail-icon">
+              <i class="fa-solid fa-temperature-half"></i>
+            </div>
+            <div class="detail-info">
+              <p class="label">Feels Like</p>
+              <p id="feels-like" class="value">--°C</p>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <div id="not-found" class="not-found hidden">
+        <img
+          src="https://cdn-icons-png.flaticon.com/512/3855/3855833.png"
+          alt="404"
+        />
+        <p>Oops! Location not found :/</p>
+      </div>
+
+      <div id="loader" class="loader hidden"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
